@@ -8,7 +8,7 @@ public class Main {
 
 	
 	public static void main(String[] args) throws IOException {
-		System.out.println("进入");
+		System.out.println("进入1");
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"applicationContext.xml");
 		context.start();

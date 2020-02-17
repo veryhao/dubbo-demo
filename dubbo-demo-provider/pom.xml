@@ -15,6 +15,7 @@
 	</properties>
 
 
+
 	<dependencies>
 
 		<dependency>
@@ -29,7 +30,7 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-
+		<!-- 示例本身的接口依赖 -->
 		<dependency>
 			<groupId>com.xxx.dubbo.demo</groupId>
 			<artifactId>dubbo-demo-interface</artifactId>
@@ -130,12 +131,36 @@
 
 
 
-
-
-
-
+    		<dependency>
+			    <groupId>com.alibaba</groupId>
+			    <artifactId>fastjson</artifactId>
+			    <version>1.2.47</version>
+			</dependency>
+			    
+		    <dependency>
+			    <groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+			    <version>3.1.0</version>
+				<type>jar</type>
+		    	<scope>compile</scope>
+			</dependency>
 
 
 	</dependencies>
 
+
+<!-- 	<profiles>
+		<profile>
+			<id>jdk-1.8</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>1.8</jdk>
+			</activation>
+			<properties>
+				<maven.compiler.source>1.8</maven.compiler.source>
+				<maven.compiler.target>1.8</maven.compiler.target>
+				<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+			</properties>
+		</profile>
+	</profiles> -->
 </project>

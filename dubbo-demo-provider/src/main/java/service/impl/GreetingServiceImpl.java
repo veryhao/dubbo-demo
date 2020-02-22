@@ -1,12 +1,18 @@
 package service.impl;
 
+import java.sql.Date;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.alibaba.dubbo.config.annotation.Service;
 
+import data.StudentMapper;
+import dto.StudentEntity;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisShardInfo;
@@ -24,6 +30,7 @@ public class GreetingServiceImpl implements GreetingService {
 	public String hello(@QueryParam("name") String name) {
 		System.out.println("hello Service is calling :-----" + name + "-----");
 		String greetMessage = "Hello, " + name;
+		testMysql();
 		return greetMessage;
 	}
 
@@ -98,6 +105,20 @@ public class GreetingServiceImpl implements GreetingService {
 		return greetMessage;
 	}
 	
+	@Autowired  
+    private StudentMapper studentMapper;  
+	
+	public void testMysql(){
+		StudentEntity se = new StudentEntity();
+		se.setStudentBirthday(new Date(2020,1,23));
+		se.setStudentID("id:1");
+		se.setStudentSex("女");
+		se.setStudentName("sunying");
+		studentMapper.insertStudent(se);
+//		StudentEntity entity = studentMapper.getStudent("10000013");  
+		System.out.println("写入成功");
+//        System.out.println("name：" + entity.getStudentName());  
+	}
 	
 	
 	//Redis服务器IP

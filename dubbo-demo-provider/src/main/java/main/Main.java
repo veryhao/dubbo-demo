@@ -18,7 +18,7 @@ public class Main {
 //				break;
 //			}
 //		}
-		  
+		 
 		System.in.read();
 		System.out.println("结束");
 	}

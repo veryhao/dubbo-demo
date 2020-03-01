@@ -24,7 +24,7 @@
 
 
 	<!-- Greeting服务 -->
-	<bean id="greetingService" class="service.impl.GreetingServiceImpl" />
+	<bean id="greetingService" class="com.service.impl.GreetingServiceImpl" />
 
 	<dubbo:service protocol="dubbo,rest"
 		interface="service.GreetingService" ref="greetingService" />

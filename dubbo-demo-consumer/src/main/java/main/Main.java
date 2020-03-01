@@ -23,6 +23,7 @@ public class Main {
 		
 		greetingService.setData("bbsy2", "2bbsy");
 		System.out.println("bbsy2值是:" + greetingService.getData("bbsy2"));
+		System.out.println("111111111111");
 		context.destroy();
 	}
 	

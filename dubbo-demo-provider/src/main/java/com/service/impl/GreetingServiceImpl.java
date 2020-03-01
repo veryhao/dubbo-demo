@@ -1,4 +1,4 @@
-package service.impl;
+package com.service.impl;
 
 import java.sql.Date;
 
@@ -10,9 +10,9 @@ import javax.ws.rs.QueryParam;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.data.StudentMapper;
+import com.dto.StudentEntity;
 
-import data.StudentMapper;
-import dto.StudentEntity;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisShardInfo;

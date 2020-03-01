@@ -1,7 +1,7 @@
-package data;
+package com.data;
 import java.util.List;
 
-import dto.StudentEntity;
+import com.dto.StudentEntity;
 
 public interface StudentMapper {
 
@@ -15,5 +15,8 @@ public interface StudentMapper {
 
 	public void deleteStudent(StudentEntity entity);
 
-	public void updateStudent(StudentEntity entity);
+	public void updateStudent(
+			StudentEntity entity);
+	  
+	public void ina();
 }
